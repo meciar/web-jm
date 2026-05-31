@@ -81,7 +81,7 @@ code {
 
 nav {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -89,6 +89,7 @@ nav a {
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 nav a:hover {
@@ -136,6 +137,52 @@ nav a:hover {
 .button:hover {
   background: var(--accent-dark);
   text-decoration: none;
+}
+
+.button-secondary {
+  background: var(--surface);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: none;
+}
+
+.button-secondary:hover {
+  background: #eff6ff;
+  color: var(--accent-dark);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.feature-list {
+  margin: 1.25rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.feature-list li + li {
+  margin-top: 0.5rem;
 }
 
 .section {

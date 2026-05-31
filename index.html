@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Osobná webová stránka">
-  <title>Web JM</title>
+  <meta name="description" content="Školenia, konzultácie a odborné poradenstvo">
+  <title>Jozef Meciar</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="logo" href="/">Web JM</a>
+      <a class="logo" href="/">Jozef Meciar</a>
       <nav aria-label="Hlavná navigácia">
         <a href="#o-mne">O mne</a>
+        <a href="#skolenia">Školenia</a>
+        <a href="#konzultacie">Konzultácie</a>
+        <a href="#gopass">GoPass</a>
         <a href="#galeria">Galéria</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -23,12 +26,12 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow">Vitajte</p>
-        <h1>Vaša osobná webová stránka</h1>
+        <h1>Školenia a konzultácie na mieru</h1>
         <p class="lead">
-          Jednoduchá prezentačná stránka hostovaná na Azure Static Web Apps.
-          Obsah môžete upraviť priamo v súboroch na GitHube.
+          Pomáham firmám aj jednotlivcom rozvíjať zručnosti, riešiť technické výzvy
+          a získať praktické know-how, ktoré využijete hneď po školení.
         </p>
-        <a class="button" href="#galeria">Pozrieť galériu</a>
+        <a class="button" href="#kontakt">Kontaktovať ma</a>
       </div>
     </section>
 
@@ -36,18 +39,84 @@
       <div class="container narrow">
         <h2>O mne</h2>
         <p>
-          Sem napíšte krátky text o sebe, vašej firme alebo vašom projekte.
-          Tento obsah sa mení zriedka — stačí upraviť súbor <code>index.html</code>
-          a pushnúť zmenu na GitHub.
+          Som odborník so skúsenosťami v oblasti IT, technológií a vzdelávania dospelých.
+          Venujem sa školeniam, konzultáciám a zdieľaniu praktických skúseností z reálnych projektov.
+        </p>
+        <p>
+          Môj prístup je zameraný na zrozumiteľnosť, praktické príklady a to, aby účastníci
+          odišli s konkrétnymi znalosťami, ktoré vedia okamžite aplikovať.
         </p>
       </div>
     </section>
 
-    <section id="galeria" class="section section-alt">
+    <section id="skolenia" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Školenia</h2>
+          <p>Firemné aj individuálne školenia prispôsobené vašim potrebám.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Firemné školenia</h3>
+            <p>
+              Školenia pre tímy a organizácie — na pracovisku alebo online.
+              Obsah prispôsobím vašej úrovni a konkrétnym cieľom.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Individuálne kurzy</h3>
+            <p>
+              Osobné školenie pre jednotlivcov, ktorí chcú rýchlo posunúť svoje zručnosti
+              v konkrétnej oblasti.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Workshopy</h3>
+            <p>
+              Kratšie praktické workshopy zamerané na vybranú tému, cvičenia
+              a okamžité uplatnenie v praxi.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="konzultacie" class="section">
+      <div class="container narrow">
+        <h2>Konzultácie</h2>
+        <p>
+          Ponúkam odborné konzultácie pre firmy aj jednotlivcov — pri riešení technických
+          problémov, plánovaní projektov alebo pri rozhodovaní o správnej stratégii.
+        </p>
+        <ul class="feature-list">
+          <li>Analýza potrieb a odporúčanie riešenia</li>
+          <li>Technické poradenstvo a druhý názor</li>
+          <li>Podpora pri implementácii a nasadení</li>
+          <li>Konzultácie online alebo osobne</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gopass" class="section section-alt">
+      <div class="container narrow">
+        <h2>Školenia v GoPass</h2>
+        <p>
+          V platforme GoPass vediem verejné školenia otvorené pre širšiu verejnosť.
+          Termíny, témy a prihlásenie nájdete priamo v ponuke GoPass.
+        </p>
+        <p>
+          <a class="button button-secondary" href="https://www.gopass.sk/" target="_blank" rel="noopener noreferrer">
+            Prejsť na GoPass
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section id="galeria" class="section">
       <div class="container">
         <div class="section-heading">
           <h2>Galéria</h2>
-          <p>Obrázky sa načítavajú zo súboru <code>gallery/manifest.json</code>.</p>
+          <p>Fotografie zo školení a podujatí.</p>
         </div>
         <div id="gallery-grid" class="gallery-grid" aria-live="polite">
           <p class="gallery-loading">Načítavam galériu…</p>
@@ -55,15 +124,15 @@
       </div>
     </section>
 
-    <section id="kontakt" class="section">
+    <section id="kontakt" class="section section-alt">
       <div class="container narrow">
         <h2>Kontakt</h2>
         <p>
-          E-mail:
-          <a href="mailto:vas@email.sk">vas@email.sk</a>
+          Máte záujem o školenie, konzultáciu alebo spoluprácu? Napíšte mi.
         </p>
-        <p class="muted">
-          Upravte kontaktné údaje v súbore <code>index.html</code>.
+        <p>
+          E-mail:
+          <a href="mailto:jozef@meciar.sk">jozef@meciar.sk</a>
         </p>
       </div>
     </section>
@@ -71,7 +140,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Web JM</p>
+      <p>&copy; <span id="year"></span> Jozef Meciar</p>
     </div>
   </footer>
 
