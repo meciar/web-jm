@@ -193,6 +193,13 @@ nav a:hover {
   color: var(--muted);
 }
 
+.gopase-group-title {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .section-minor {
   padding: 2.5rem 0 3rem;
   border-top: 1px solid var(--border);
