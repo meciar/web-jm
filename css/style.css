@@ -193,11 +193,26 @@ nav a:hover {
   color: var(--muted);
 }
 
+.gopase-intro {
+  max-width: 42rem;
+}
+
+.gopase-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem 3rem;
+  margin-top: 1.5rem;
+}
+
 .gopase-group-title {
-  margin: 1.5rem 0 0.75rem;
+  margin: 0 0 0.75rem;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
+}
+
+.gopase-group .feature-list {
+  margin: 0;
 }
 
 .section-minor {
