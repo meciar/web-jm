@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Osobná webová stránka">
+  <title>Web JM</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">Web JM</a>
+      <nav aria-label="Hlavná navigácia">
+        <a href="#o-mne">O mne</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Vitajte</p>
+        <h1>Vaša osobná webová stránka</h1>
+        <p class="lead">
+          Jednoduchá prezentačná stránka hostovaná na Azure Static Web Apps.
+          Obsah môžete upraviť priamo v súboroch na GitHube.
+        </p>
+        <a class="button" href="#galeria">Pozrieť galériu</a>
+      </div>
+    </section>
+
+    <section id="o-mne" class="section">
+      <div class="container narrow">
+        <h2>O mne</h2>
+        <p>
+          Sem napíšte krátky text o sebe, vašej firme alebo vašom projekte.
+          Tento obsah sa mení zriedka — stačí upraviť súbor <code>index.html</code>
+          a pushnúť zmenu na GitHub.
+        </p>
+      </div>
+    </section>
+
+    <section id="galeria" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Galéria</h2>
+          <p>Obrázky sa načítavajú zo súboru <code>gallery/manifest.json</code>.</p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid" aria-live="polite">
+          <p class="gallery-loading">Načítavam galériu…</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <div class="container narrow">
+        <h2>Kontakt</h2>
+        <p>
+          E-mail:
+          <a href="mailto:vas@email.sk">vas@email.sk</a>
+        </p>
+        <p class="muted">
+          Upravte kontaktné údaje v súbore <code>index.html</code>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Web JM</p>
+    </div>
+  </footer>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Náhľad obrázka">
+    <button type="button" class="lightbox-close" aria-label="Zavrieť">&times;</button>
+    <figure>
+      <img id="lightbox-image" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </dialog>
+
+  <script src="/js/gallery.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

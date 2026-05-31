@@ -1,0 +1,258 @@
+:root {
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --text: #1f2933;
+  --muted: #5f6c7b;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --border: #e5e7eb;
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+  --max-width: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92em;
+  background: #eef2ff;
+  padding: 0.12rem 0.35rem;
+  border-radius: 6px;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+}
+
+.container.narrow {
+  width: min(calc(100% - 2rem), 720px);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.lead {
+  max-width: 42rem;
+  font-size: 1.125rem;
+  color: var(--muted);
+  margin: 0 0 1.75rem;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.button:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: var(--surface);
+  border-block: 1px solid var(--border);
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading p,
+.muted {
+  color: var(--muted);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-loading,
+.gallery-empty,
+.gallery-error {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 2rem 0 3rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.lightbox {
+  width: min(92vw, 960px);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0;
+  background: #0f172a;
+  color: #fff;
+}
+
+.lightbox::backdrop {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.lightbox figure {
+  margin: 0;
+}
+
+.lightbox img {
+  display: block;
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  background: #020617;
+}
+
+.lightbox figcaption {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+  }
+}
