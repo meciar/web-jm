@@ -181,8 +181,31 @@ nav a:hover {
   color: var(--muted);
 }
 
-.feature-list li + li {
-  margin-top: 0.5rem;
+.section-minor {
+  padding: 2.5rem 0 3rem;
+  border-top: 1px solid var(--border);
+}
+
+.section-minor-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.gallery-grid-compact {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery-grid-compact .gallery-item {
+  box-shadow: none;
+  border: 1px solid var(--border);
+}
+
+.gallery-grid-compact .gallery-item:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 .section {
